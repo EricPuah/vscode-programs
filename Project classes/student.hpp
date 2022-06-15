@@ -7,14 +7,42 @@ using namespace std;
 class student : public user
 {
     private:
-    string matricNo;
-    Sport sp;
+    string name, matricNo;
+    int age;
+    double height,weight;
+    Sport* sp;
     
     public:
-    string setMatric(matricNo);
-    string getMatric();
-    Report getResult();
-
+    student(string name, int age, double weight, double height, string ID)
+    {
+        this->name = name;
+        this->age = age;
+        this->weight = weight;
+        this->height = height;
+        this->ID = matricNo;
+    } 
+    string getID()
+    {
+        return matricNo;
+    }
+    Report getReport();
+    string getName()
+    {
+        return name;
+    }
+    int getAge()
+    {
+        return age;
+    }
+    double getHeight()
+    {
+        return height;
+    }
+    double getWeight()
+    {
+        return weight;
+    }
 };
+
 
 #endif

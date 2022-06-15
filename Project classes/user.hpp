@@ -6,19 +6,11 @@ using namespace std;
 class user
 {
     private:
-    string name;
-    int age;
-    double height,weight;
+     string ID;
+
 
     public:
-    string setName(string);
-    int setAge(int);
-    double setHeight(double);
-    double setWeight(double);
-    string getName();
-    double getAge();
-    double getHeight();
-    double getWeight();
+    virtual string getID()=0;
+ 
 };
-
 #endif
