@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+
+class Stock{
+    private:
+    string code;
+    string name;
+    double closePrice;
+    double currentPrice;
+    double percentclose;
+    double percentcurrent;
+    double diff;
+
+public:
+    string getCode(){
+        return code;
+    }
+    string getName(){
+        return name;
+    }  
+    string setCode(string newCode){
+        code = newCode;
+        return code;
+    }
+    string setName(string newName){
+        name = newName;
+       return name;
+    }
+    double setCurrentPrice(double newCurrentPrice){
+        currentPrice = newCurrentPrice;
+        return currentPrice;
+    }
+    double setClosePrice(double newClosePrice){
+        closePrice = newClosePrice;
+        return closePrice;
+    }
+    double changePercent(double closePrice,double currentPrice){
+       
+        percentclose = (closePrice/100);
+        percentcurrent = (currentPrice/100);
+        diff = percentclose - percentcurrent;
+        return diff;
+
+    }
+    
+    void display(){
+        cout << "Stock : " << name <<"(" <<code<<")"<< endl;
+        cout<<"Close Price => "<<"RM"<<closePrice << endl;
+        cout<<"Current Price => "<<"RM"<<currentPrice << endl;
+        cout <<"Change Percentage => "<< diff <<endl;
+    }
+
+    
+
+};
+int main(){
+    Stock s1;
+    Stock s2;
+    double closePrice;
+    double currentPrice;
+    s1.setName("Maybank");
+    s1.setCode("MBB");
+    s1.setClosePrice(5500.00);
+    s1.setCurrentPrice(5250.00);
+    s1.changePercent(5500.00,5250.00);
+    s1.display();
+    s2.setName("CIMB Bank Berhad");
+    s2.setCode("CIMB");
+    s2.setClosePrice(10000.00);
+    s2.setCurrentPrice(15050.00);
+    s2.changePercent(10000.00,15050.00);
+    s2.display();
+
+    
+
+system("pause");
+return 0;
+}

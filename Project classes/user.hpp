@@ -10,7 +10,12 @@ class user
 
 
     public:
+    user(string ID)
+    {
+        this->ID = ID;
+    }
     virtual string getID()=0;
+    virtual void display()=0;
  
 };
 #endif

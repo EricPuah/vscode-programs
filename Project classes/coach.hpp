@@ -10,10 +10,10 @@ class coach : public user
     private:
     string ID;
     student* stud;
-    Sport *sport;
+    //Sport *sport;
 
     public:
-    coach(string ID, student* stud)
+    coach(string ID, student* stud): user(ID)
     {
         this->ID = ID;
         this->stud = stud; 
@@ -23,6 +23,13 @@ class coach : public user
         return ID;
     }
     
-    Report getReport();
+    void display()
+    {
+        cout<<ID<<endl;
+        stud->display();
+    }
+//Report getReport();
 
 };
+
+#endif
