@@ -16,7 +16,7 @@ class student : public user
     public:
     student():user(ID)
     {
-        inputStudent();
+       
     };
     student(string ID, string name,int age, double weight, double height): user(ID)
     {
