@@ -11,6 +11,7 @@ class student : public user
     string name, ID;
     int age;
     double height,weight;
+    bool try;
    // Sport* sp;
     
     public:
